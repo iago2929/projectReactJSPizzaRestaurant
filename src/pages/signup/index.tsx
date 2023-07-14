@@ -13,28 +13,28 @@ export default function Singnup() {
   return (
     <>
         <Head>
-          <title>Faça seu cadastro agora!</title>
+          <title>Register now!</title>
         </Head>
         <div className={styles.containerCenter}>
         <Image src={logoImg} alt="Logo Pizzaria"/>
         
 
         <div className={styles.login}>
-            <h1>Criando sua conta</h1>
+            <h1>Creating your account</h1>
 
           <form>
           <Input 
-            placeholder="Digite seu nome"
+            placeholder="Type your name"
             type="text"  
             /> 
 
             <Input 
-            placeholder="Digite seu email"
+            placeholder="Type your e-mail"
             type="text"  
             /> 
 
             <Input 
-            placeholder="Digite sua senha"
+            placeholder="Type your password"
             type="password"  
             /> 
 
@@ -42,11 +42,11 @@ export default function Singnup() {
         <Button
         type="submit"
         loading={false}
-        >Acessar</Button>
+        >Access</Button>
           </form>
 
         <Link href="/" className={styles.text}>
-        Já possui uma conta? Faça login!
+        Already have an account? Log in!
         </Link>
         
         </div>

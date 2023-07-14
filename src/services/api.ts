@@ -10,7 +10,7 @@ export function setupAPIClient(ctx = undefined){
     const api = axios.create({
         baseURL:'http://localhost:3333',
         headers: {
-            Authorization:`Bearer ${cookies['@nextauth.token']}`
+        Authorization:`Bearer ${cookies['@nextauth.token']}`
         }
     })
 
@@ -18,9 +18,9 @@ export function setupAPIClient(ctx = undefined){
         return response;
     }, (error: AxiosError) => {
         if(error.response.status === 401){
-            //qualquer erro 401 (nao autorizado) devemos deslogar o usuario 
+            //any error 401 (unauthorized) we must log out the user
             if(typeof window !== undefined){
-                //chamar a função para deslogar o usuario
+                //call the function to logout the user
                 signOut();
             }else{
                 return Promise.reject(new AuthTokenError() )

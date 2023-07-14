@@ -35,7 +35,7 @@ const [loading, setLoading] =useState('false');
   return (
     <>
         <Head>
-          <title>Pizzaria Martins - Faça seu Login</title>
+          <title>Pizzaria Martins - Login</title>
         </Head>
         <div className={styles.containerCenter}>
         <Image src={logoImg} alt="Logo Pizzaria"/>
@@ -44,14 +44,14 @@ const [loading, setLoading] =useState('false');
         <div className={styles.login}>
           <form onSubmit={handleLogin}>
             <Input 
-            placeholder="Digite seu email"
+            placeholder="Type your e-mail"
             type="text" 
             value={email}
             onChange={ (e) => setEmail(e.target.value) } 
           /> 
 
             <Input 
-            placeholder="Digite sua senha"
+            placeholder="Type your password"
             type="password" 
             value={password}
             onChange={ (e) => setPassword(e.target.value) }  
@@ -61,11 +61,11 @@ const [loading, setLoading] =useState('false');
         <Button
         type="submit"
         loading={false}
-        >Acessar</Button>
+        >Access</Button>
           </form>
 
         <Link href="/signup" className={styles.text}>
-        Não possui uma conta? Cadastre-se
+        Don't have an account? Register
         </Link>
         
         </div>
