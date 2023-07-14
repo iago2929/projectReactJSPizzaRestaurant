@@ -12,6 +12,6 @@ export function setupAPIClient(ctx = undefined){
     })
 
     api.interceptors.response.use(response => {
-        return response
+        return response;
     })
 }
